@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+
+    <a href="javascript:;" data-demo="1">跳转</a>
+
+    <a href="javascript:;">不跳</a>
+    <a href="javascript:;">不跳</a>
+    <a href="javascript:;">不跳</a>
+    <a href="javascript:;">不跳</a>
+    <script>
+        window.onload = function () {
+
+            getAttr();
+        }
+
+        //javascript写法 //        function getAttr() {
+        //
+        //            var oA = document.getElementsByTagName('a');
+        //
+        //            for (var i = 0; i < oA.length; i++) {
+        //
+        //                oA[i].onclick = function () {
+        //
+        //
+        //                    if (this.getAttribute('data-demo')) {
+        //
+        //                        alert('有')
+        //                    } else {
+        //
+        //                        alert('没')
+        //                    }
+        //                }
+        //
+        //
+        //
+        //            }
+        //
+        //
+        //        }
+
+        function getAttr() { //jquery写法
+
+            var oA = $('a');
+
+            oA.click(function () {
+
+                if ($(this).attr('data-demo')) {
+
+                    alert('有')
+
+                } else {
+
+                    alert('没')
+                }
+
+            })
+
+        }
+    </script>
+</body>
+
+</html>
